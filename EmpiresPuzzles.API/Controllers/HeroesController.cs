@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using EmpiresPuzzles.API.Interfaces;
 using EmpiresPuzzles.API.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -21,12 +22,18 @@ namespace EmpiresPuzzles.API.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<Hero>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult GetAll()
         {
             return Ok(_heroService.GetAll());
         }
 
         [HttpGet("{name}")]
+        [ProducesResponseType(typeof(Hero), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult GetBy(string name)
         {
             return Ok(_heroService.GetBy(name));
