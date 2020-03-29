@@ -51,7 +51,7 @@ namespace EmpiresPuzzles.API.Implementations.InMemoryService
                     Gender = "Female",
                     Type = new HeroType()
                     {
-                        Element = "File",
+                        Element = "Fire",
                         Rarity = "Common",
                         Class = "Ranger"
                     },
@@ -74,6 +74,74 @@ namespace EmpiresPuzzles.API.Implementations.InMemoryService
                         Name = "Minor Healing",
                         ManaSpeed = "Average",
                         MaxLevelEffect = new List<string>() { "Recovers 27% health for all allies" }
+                    }
+                }
+                ,new Hero()
+                {
+                    Name = "Aife",
+                    Profession = "Village Girl",
+                    ImageURI = "https://vignette.wikia.nocookie.net/empiresandpuzzles/images/e/e5/Aife_-_Hero_Card.gif/revision/latest/scale-to-width-down/300?cb=20190410230356",
+                    Star = 1,
+                    Gender = "Female",
+                    Type = new HeroType()
+                    {
+                        Element = "Nature",
+                        Rarity = "Common",
+                        Class = "Fighter"
+                    },
+                    BaseStatus = new HeroStatus()
+                    {
+                        Power = 140,
+                        Attack = 168,
+                        Defense = 147,
+                        Health = 289
+                    },
+                    MaxedStatus = new HeroStatus()
+                    {
+                        Power = 209,
+                        Attack = 209,
+                        Defense = 183,
+                        Health = 360
+                    },
+                    Skill = new HeroSkill()
+                    {
+                        Name = "Hacking Attack",
+                        ManaSpeed = "Fast",
+                        MaxLevelEffect = new List<string>() { "Deals 275% damage to the target" }
+                    }
+                }
+                ,new Hero()
+                {
+                    Name = "Brand",
+                    Profession = "Carefree Adventurer",
+                    ImageURI = "https://vignette.wikia.nocookie.net/empiresandpuzzles/images/4/43/Brand_-_Hero_Card.gif/revision/latest/scale-to-width-down/300?cb=20190410224305",
+                    Star = 1,
+                    Gender = "Male",
+                    Type = new HeroType()
+                    {
+                        Element = "Ice",
+                        Rarity = "Common",
+                        Class = "Fighter"
+                    },
+                    BaseStatus = new HeroStatus()
+                    {
+                        Power = 140,
+                        Attack = 142,
+                        Defense = 148,
+                        Health = 355
+                    },
+                    MaxedStatus = new HeroStatus()
+                    {
+                        Power = 210,
+                        Attack = 177,
+                        Defense = 184,
+                        Health = 443
+                    },
+                    Skill = new HeroSkill()
+                    {
+                        Name = "Fierce Slash",
+                        ManaSpeed = "Average",
+                        MaxLevelEffect = new List<string>() { "Deals 115% damage to all enemies" }
                     }
                 }
             };
