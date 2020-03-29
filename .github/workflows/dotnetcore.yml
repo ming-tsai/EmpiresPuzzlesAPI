@@ -8,7 +8,8 @@ on:
 
 jobs:
   build_empire:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v1
     - name: Build and deploy the Docker image
@@ -17,6 +18,6 @@ jobs:
         APP_NAME: ${{ 'empires-puzzles-api' }}
       run: |
         cd ./empirespuzzlesapi
-        docker login --username=mt15-0094@unphu.edu.do -password=$HEROKU_API_KEY empires-puzzles-api.herokuapp.com
+        docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
         heroku container:push web -a $APP_NAME
         heroku container:release web -a $APP_NAME
