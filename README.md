@@ -1,5 +1,5 @@
 # Empires Puzzle API
-This is a empires puzzles mobile game api for get game information.
+This is a empires puzzles game api for get some information of game, using technology dotnet core and heroku for deploy the api.
 
 Empires & Puzzles: RPG Quest. Empires & Puzzles is a completely new take on RPG games, combining match-3 battles and building a mighty stronghold - topped with thrilling PVP duels.
 
@@ -7,7 +7,7 @@ Empires & Puzzles: RPG Quest. Empires & Puzzles is a completely new take on RPG 
 [Heroku Enviorment](https://empires-puzzles-api.herokuapp.com/swagger)
 
 # Reference
-For more information
+
 [Deploy a Containerized ASP.NET Core App to Heroku using GitHub Actions](https://codeburst.io/deploy-a-containerized-asp-net-core-app-to-heroku-using-github-actions-9e54c72db943)
 
 
