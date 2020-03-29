@@ -40,7 +40,7 @@ namespace EmpiresPuzzles.API.Implementations.InMemoryService
                     {
                         Name = "Backstab",
                         ManaSpeed = "Fast",
-                        MaxLevelEffect = "Deals 265% damage to the target"
+                        MaxLevelEffect = new List<string>() { "Deals 265% damage to the target" }
                     }
                 }
                 ,new Hero(){
@@ -73,7 +73,7 @@ namespace EmpiresPuzzles.API.Implementations.InMemoryService
                     {
                         Name = "Minor Healing",
                         ManaSpeed = "Average",
-                        MaxLevelEffect = "Recovers 27% health for all allies"
+                        MaxLevelEffect = new List<string>() { "Recovers 27% health for all allies" }
                     }
                 }
             };
