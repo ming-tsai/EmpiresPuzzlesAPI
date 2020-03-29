@@ -5,6 +5,6 @@ namespace EmpiresPuzzles.API.Models
         public int Power { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
-        public int Health { get; set; }  
+        public int Health { get; set; }
     }
 }

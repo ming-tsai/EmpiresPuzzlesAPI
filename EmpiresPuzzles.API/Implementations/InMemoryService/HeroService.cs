@@ -1,8 +1,8 @@
-using System.Collections.Generic;
 using EmpiresPuzzles.API.Interfaces;
 using EmpiresPuzzles.API.Models;
-using System.Linq;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EmpiresPuzzles.API.Implementations.InMemoryService
 {
@@ -146,14 +146,8 @@ namespace EmpiresPuzzles.API.Implementations.InMemoryService
                 }
             };
 
-        public IEnumerable<Hero> GetAll()
-        {
-            return Heroes.OrderBy(h => h.Name);
-        }
+        public IEnumerable<Hero> GetAll() => Heroes.OrderBy(h => h.Name);
 
-        public Hero GetBy(string name)
-        {
-            return Heroes.FirstOrDefault(h => h.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
-        }
+        public Hero GetBy(string name) => Heroes.FirstOrDefault(h => h.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
     }
 }

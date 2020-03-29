@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using EmpiresPuzzles.API.Models;
+using System.Collections.Generic;
 
 namespace EmpiresPuzzles.API.Interfaces
 {
