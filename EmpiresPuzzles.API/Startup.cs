@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmpiresPuzzles.API.Implementations.InMemoryService;
+using EmpiresPuzzles.API.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +34,8 @@ namespace EmpiresPuzzles.API
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "Empires & Puzzles API", Version = "v1" });
             });
+
+            services.AddTransient<IHeroService, HeroService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
