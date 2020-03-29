@@ -80,7 +80,7 @@ namespace EmpiresPuzzles.API.Implementations.InMemoryService
 
         public IEnumerable<Hero> GetAll()
         {
-            return Heroes;
+            return Heroes.OrderBy(h => h.Name);
         }
 
         public Hero GetBy(string name)
