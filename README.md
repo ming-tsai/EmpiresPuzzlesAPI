@@ -1,7 +1,7 @@
 # Empires Puzzle API
 ![CI](https://github.com/ming-tsai/empirespuzzlesapi/workflows/CI/badge.svg)
 
-This is a empires puzzles game api for get some information of game, using technology dotnet core and heroku for deploy the api.
+This project is an example how to deploy dotnet core 3.1 API in Heroku using Empire Puzzles information.
 
 Empires & Puzzles: RPG Quest. Empires & Puzzles is a completely new take on RPG games, combining match-3 battles and building a mighty stronghold - topped with thrilling PVP duels.
 
