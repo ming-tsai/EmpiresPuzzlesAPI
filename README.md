@@ -13,21 +13,36 @@ Empires & Puzzles: RPG Quest. Empires & Puzzles is a completely new take on RPG 
 # Getting start
 
 ## Run project locally
-### Build project
+1. Build project
 ```bash
 dotnet build
 ```
 
-### Config dev connection string on appsettings.Development.json
+2. Config dev connection string on appsettings.Development.json
 ```json
   "ConnectionStrings" : {
     "PostgreSQL" : "User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Pooling=true;SslMode=Require;TrustServerCertificate=True;"
   }
 ```
-### Run project
+3. Run project
 ```bash
 dotnet run --project EmpiresPuzzles.API
 ```
+
+## Deploy project on Heroku
+
+1. Create [Heroku app](https://trailhead.salesforce.com/en/content/learn/projects/develop-heroku-applications/create-a-heroku-app)
+2. Add-ons [postgresql](https://www.heroku.com/postgres) on Heroku app
+3. Set [Heroku environment variable](https://devcenter.heroku.com/articles/config-vars#using-the-heroku-cli) with name `ConnectionStrings__PostgreSQL`
+```value
+User ID={user id};Password={password};Host={host};Port=5432;Database={dbname};Pooling=true;SslMode=Require;TrustServerCertificate=True;
+```
+4. Configure `APP_NAME` and `HEROKU_API_KEY` secrets
+5. Create action with this [workflow](https://github.com/ming-tsai/EmpiresPuzzlesAPI/blob/master/.github/workflows/dotnetcore.yml)
+
+6. Run workflow
+7. Open Heroku app `{APP_NAME}.herokuapp.com/swagger`
+
 # Enviorment
 [Heroku Enviorment](https://empires-puzzles-api.herokuapp.com/swagger)
 
