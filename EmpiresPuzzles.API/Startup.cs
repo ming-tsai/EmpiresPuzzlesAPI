@@ -1,11 +1,14 @@
-using EmpiresPuzzles.API.Implementations.InMemoryService;
+using EmpiresPuzzles.API.Implementations.Services;
 using EmpiresPuzzles.API.Interfaces;
+using EmpiresPuzzles.API.Migrations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Npgsql;
 
 namespace EmpiresPuzzles.API
 {
@@ -27,6 +30,10 @@ namespace EmpiresPuzzles.API
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "Empires & Puzzles API", Version = "v1" });
             });
+
+            services.AddEntityFrameworkNpgsql().AddDbContext<ApplicationContext>(
+                options => options.UseNpgsql(new NpgsqlConnection(Configuration.GetConnectionString("PostgreSQL")))
+            );
 
             services.AddTransient<IHeroService, HeroService>();
         }
