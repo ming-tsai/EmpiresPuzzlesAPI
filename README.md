@@ -35,7 +35,7 @@ dotnet run --project EmpiresPuzzles.API
 2. Add-ons [postgresql](https://www.heroku.com/postgres) on Heroku app
 3. Set [Heroku environment variable](https://devcenter.heroku.com/articles/config-vars#using-the-heroku-cli) with name `ConnectionStrings__PostgreSQL`
 ```value
-User ID={user id};Password={password};Host={host};Port=5432;Database={dbname};Pooling=true;SslMode=Require;TrustServerCertificate=True;
+User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Pooling=true;SslMode=Require;TrustServerCertificate=True;
 ```
 4. Configure `APP_NAME` and `HEROKU_API_KEY` secrets
 5. Create action with this [workflow](https://github.com/ming-tsai/EmpiresPuzzlesAPI/blob/master/.github/workflows/dotnetcore.yml)
