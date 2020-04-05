@@ -12,8 +12,7 @@ Empires & Puzzles: RPG Quest. Empires & Puzzles is a completely new take on RPG 
 
 [Deploy a Containerized ASP.NET Core App to Heroku using GitHub Actions](https://codeburst.io/deploy-a-containerized-asp-net-core-app-to-heroku-using-github-actions-9e54c72db943)
 
-
-[Empires and puzzles wiki](https://empiresandpuzzles.fandom.com/wiki/Home)
+[Empires and puzzles fandom wiki](https://empiresandpuzzles.fandom.com/wiki/Home)
 
 [Official website](https://support.smallgiantgames.com/hc/en-us)
 
