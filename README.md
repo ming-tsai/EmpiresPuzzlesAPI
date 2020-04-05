@@ -1,5 +1,5 @@
 # Empires Puzzle API
-![CI](https://github.com/ming-tsai/empirespuzzlesapi/workflows/CI/badge.svg)
+![master](https://github.com/ming-tsai/empirespuzzlesapi/workflows/CI/badge.svg)
 
 This project is an example how to deploy dotnet core 3.1 API in Heroku using Empire Puzzles information.
 
