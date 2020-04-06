@@ -38,7 +38,7 @@ dotnet run --project EmpiresPuzzles.API
 ```value
 User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Pooling=true;SslMode=Require;TrustServerCertificate=True;
 ```
-5. Configure `APP_NAME` and `HEROKU_API_KEY` secrets
+5. Configure `APP_NAME` and `HEROKU_API_KEY` secrets [see more](https://codeburst.io/deploy-a-containerized-asp-net-core-app-to-heroku-using-github-actions-9e54c72db943)
 6. Create action with this [workflow](https://github.com/ming-tsai/EmpiresPuzzlesAPI/blob/master/.github/workflows/dotnetcore.yml)
 
 7. Run workflow
