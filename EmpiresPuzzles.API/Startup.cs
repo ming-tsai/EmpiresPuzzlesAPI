@@ -4,6 +4,7 @@ using EmpiresPuzzles.API.GraphQL.Types;
 using EmpiresPuzzles.API.Implementations.Services;
 using EmpiresPuzzles.API.Interfaces;
 using EmpiresPuzzles.API.Migrations;
+using GraphiQl;
 using GraphQL;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
@@ -60,6 +61,8 @@ namespace EmpiresPuzzles.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            // GraphQL UI
+            app.UseGraphiQl();
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
