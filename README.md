@@ -47,14 +47,19 @@ User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Poo
 
 # Environments
 [Swagger Environment](https://empires-puzzles-api.herokuapp.com/swagger)
+
 [GraphQL Environment](https://empires-puzzles-api.herokuapp.com/graphql)
 
 # Reference
 
 [Deploy a Containerized ASP.NET Core App to Heroku using GitHub Actions](https://codeburst.io/deploy-a-containerized-asp-net-core-app-to-heroku-using-github-actions-9e54c72db943)
 
+[GraphL](https://graphql.org/)
+
+[GraphQL with NetCore API](https://learnmoreseekmore.blogspot.com/2019/11/graphql-api-integration-in-aspnet-core.html)
+
+[GraphQL UI on dotnet core](https://github.com/JosephWoodward/graphiql-dotnet)
+
 [Empires and puzzles fandom wiki](https://empiresandpuzzles.fandom.com/wiki/Home)
 
 [Official website](https://support.smallgiantgames.com/hc/en-us)
-
-[Download the game](https://play.google.com/store/apps/details?id=com.smallgiantgames.empires&hl=en)
