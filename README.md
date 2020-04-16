@@ -61,5 +61,3 @@ User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Poo
 [GraphQL UI on dotnet core](https://github.com/JosephWoodward/graphiql-dotnet)
 
 [Empires and puzzles fandom wiki](https://empiresandpuzzles.fandom.com/wiki/Home)
-
-[Official website](https://support.smallgiantgames.com/hc/en-us)
