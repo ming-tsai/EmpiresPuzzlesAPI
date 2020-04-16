@@ -50,7 +50,7 @@ User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Poo
 
 [GraphQL Environment](https://empires-puzzles-api.herokuapp.com/graphql)
 
-# Reference
+# References
 
 [Deploy a Containerized ASP.NET Core App to Heroku using GitHub Actions](https://codeburst.io/deploy-a-containerized-asp-net-core-app-to-heroku-using-github-actions-9e54c72db943)
 
