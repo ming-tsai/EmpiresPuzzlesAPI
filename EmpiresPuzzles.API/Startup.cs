@@ -1,13 +1,20 @@
+using EmpiresPuzzles.API.GraphQL;
+using EmpiresPuzzles.API.GraphQL.Queries;
+using EmpiresPuzzles.API.GraphQL.Types;
 using EmpiresPuzzles.API.Implementations.Services;
 using EmpiresPuzzles.API.Interfaces;
 using EmpiresPuzzles.API.Migrations;
+using GraphQL;
+using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 using Npgsql;
 
 namespace EmpiresPuzzles.API
@@ -36,6 +43,14 @@ namespace EmpiresPuzzles.API
             );
 
             services.AddTransient<IHeroService, HeroService>();
+
+            // GraphQL
+            
+            services.AddScoped<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
+            services.AddScoped<ISchema, RootSchema>();
+            services.AddSingleton<HeroType>();
+            services.AddScoped<HeroQuery>();
+            services.AddTransient<IDocumentExecuter, DocumentExecuter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
