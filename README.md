@@ -42,10 +42,12 @@ User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Poo
 6. Create action with this [workflow](https://github.com/ming-tsai/EmpiresPuzzlesAPI/blob/master/.github/workflows/dotnetcore.yml)
 
 7. Run workflow
-8. Open Heroku app `{APP_NAME}.herokuapp.com/swagger`
+8. Open swagger endpoint `{APP_NAME}.herokuapp.com/swagger`
+9. Open GraphQL endpoint `{APP_NAME}.herokuapp.com/graphql`
 
-# Enviorment
-[Heroku Enviorment](https://empires-puzzles-api.herokuapp.com/swagger)
+# Environments
+[Swagger Environment](https://empires-puzzles-api.herokuapp.com/swagger)
+[GraphQL Environment](https://empires-puzzles-api.herokuapp.com/graphql)
 
 # Reference
 
