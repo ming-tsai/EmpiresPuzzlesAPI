@@ -7,7 +7,6 @@ namespace EmpiresPuzzles.API.GraphQL.Types
     {
         public HeroSpeedType()
         {
-            Field(x => x.Id, type: typeof(IdGraphType));
             Field(x => x.Description);
         }
     }

@@ -50,6 +50,7 @@ namespace EmpiresPuzzles.API
             services.AddScoped<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
             services.AddScoped<ISchema, RootSchema>();
             services.AddSingleton<HeroType>();
+            services.AddSingleton<HeroSpeedType>();
             services.AddScoped<HeroQuery>();
             services.AddTransient<IDocumentExecuter, DocumentExecuter>();
         }

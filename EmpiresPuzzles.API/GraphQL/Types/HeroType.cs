@@ -7,18 +7,17 @@ namespace EmpiresPuzzles.API.GraphQL.Types
     {
         public HeroType()
         {
-            Field(x=> x.Id, type: typeof(IdGraphType));
             Field(x=> x.Color);
             Field(x=> x.Name);
             Field(x=> x.TeamCost);
             Field(x=> x.Stars);
-            Field(x=> x.SpeedId);
             Field(x=> x.MaxPower);
             Field(x=> x.MaxAttack);
             Field(x=> x.MaxDefense);
             Field(x=> x.MaxHealth);
             Field(x=> x.MaxLevel);
-            Field(x=> x.FandomWikiURI);
+            Field(x=> x.FandomWikiURI).Description("URI for more description and ");
+            Field(x=> x.HeroSpeed, type: typeof(HeroSpeedType));
         }
     }
 }
