@@ -45,6 +45,48 @@ User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Poo
 8. Open swagger endpoint `{APP_NAME}.herokuapp.com/swagger`
 9. Open GraphQL endpoint `{APP_NAME}.herokuapp.com/graphql`
 
+# Examples in GraphQL
+This is an example for getting full fileds of heroes information.
+```graphql
+query getFullFields {
+  heroes {
+    name
+    stars
+    color
+    teamCost
+    maxPower
+    maxAttack
+    maxDefense
+    maxHealth
+    maxLevel
+    fandomWikiURI
+    heroSpeed {
+      description
+    }
+  }
+}
+```
+
+This is an example for getting hero by name
+```graphql
+query getByName {
+  hero(name: "Thorne") {
+    name
+    stars
+    color
+    teamCost
+    maxPower
+    maxAttack
+    maxDefense
+    maxHealth
+    maxLevel
+    fandomWikiURI
+    heroSpeed {
+      description
+    }
+  }
+}
+```
 # Environments
 [Swagger Environment](https://empires-puzzles-api.herokuapp.com/swagger)
 
