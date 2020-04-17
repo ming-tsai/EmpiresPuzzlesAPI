@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>You're lost?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <section class="hero is-info is-fullheight">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="column is-6 is-offset-3">
+                        <h1 class="title">
+                            You're lost?
+                        </h1>
+                        <h2 class="subtitle">
+                            Are you locking for some endpoints? 
+                        </h2>
+                        <div class="field columns">
+                            <p class="control column is-offset-2">
+                                <a class="button is-info" v-bind:href="''+swagger+''">
+                                    For swagger
+                                </a>
+                            </p>
+                            <p class="control column">
+                                <a class="button is-info" v-bind:href="''+graphQL+''">
+                                    For GraphQL
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Full bundle -->
+    <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+
+    <!-- Individual components -->
+    <script src="https://unpkg.com/buefy/dist/components/table"></script>
+    <script src="https://unpkg.com/buefy/dist/components/input"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    graphQL: "https://" + window.location.hostname + "/graphql",
+                    swagger: "https://" + window.location.hostname + "/swagger",
+                }
+            }
+        })
+    </script>
+    <style>
+        html,
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+
+        .hero.is-info {
+            background: linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)), url('https://i.picsum.photos/id/1047/3264/2448.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .hero .nav,
+        .hero.is-success .nav {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .hero .subtitle {
+            padding: 3rem 0;
+            line-height: 1.5;
+        }
+    </style>
+</body>
+
+</html>

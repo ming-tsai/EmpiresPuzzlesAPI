@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using EmpiresPuzzles.API.GraphQL;
 using EmpiresPuzzles.API.GraphQL.Queries;
 using EmpiresPuzzles.API.GraphQL.Types;
@@ -62,6 +63,10 @@ namespace EmpiresPuzzles.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             // GraphQL UI
             app.UseGraphiQl();
 
@@ -73,7 +78,7 @@ namespace EmpiresPuzzles.API
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
             });
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
