@@ -17,14 +17,15 @@ Empires & Puzzles: RPG Quest. Empires & Puzzles is a completely new take on RPG 
 ```bash
 dotnet build
 ```
+2. Create `appsettings.Development.json` file
 
-2. Config dev connection string on appsettings.Development.json
+3. Config dev connection string on the file
 ```json
   "ConnectionStrings" : {
     "PostgreSQL" : "User ID={user};Password={paswword};Host={host};Port=5432;Database={database};Pooling=true;SslMode=Require;TrustServerCertificate=True;"
   }
 ```
-3. Run project
+4. Run project
 ```bash
 dotnet run --project EmpiresPuzzles.API
 ```
