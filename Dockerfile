@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 COPY *.sln .
 COPY tests/EmpiresPuzzles.Test/*.csproj EmpiresPuzzles.Test/
-COPY EmpiresPuzzles.API/*.csproj EmpiresPuzzles.API/
+COPY src/EmpiresPuzzles.API/*.csproj EmpiresPuzzles.API/
 RUN dotnet restore
 COPY . .
 
