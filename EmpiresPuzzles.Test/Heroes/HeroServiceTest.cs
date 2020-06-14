@@ -1,21 +1,20 @@
 using EmpiresPuzzles.API.Controllers;
-using EmpiresPuzzles.API.Implementations.InMemoryService;
 using EmpiresPuzzles.API.Interfaces;
 using EmpiresPuzzles.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 using System;
 
-namespace EmpiresPuzzles.Test.HeroesTest
+namespace EmpiresPuzzles.Test.Heroes
 {
-    public class Controller
+    public class HeroServiceTest
     {
         private IHeroService heroService;
         private HeroesController controller;
         [SetUp]
         public void Setup()
         {
-            heroService = new HeroService();
+            heroService = new EmpiresPuzzles.API.InMemory.HeroService();
             controller = new HeroesController(heroService);
         }
 

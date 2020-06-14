@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EmpiresPuzzles.API.Implementations.InMemoryService
+namespace EmpiresPuzzles.API.InMemory
 {
     public class HeroService : IHeroService
     {
