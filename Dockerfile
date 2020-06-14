@@ -2,16 +2,16 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 COPY *.sln .
-COPY tests/EmpiresPuzzles.Test/*.csproj .
-COPY src/EmpiresPuzzles.API/*.csproj .
+COPY tests/EmpiresPuzzles.Test/*.csproj src/tests
+COPY src/EmpiresPuzzles.API/*.csproj src/src
 RUN dotnet restore
 COPY . .
 
 # testing
 FROM build AS testing
-WORKDIR /src/EmpiresPuzzles.API
+WORKDIR /src/src/EmpiresPuzzles.API
 RUN dotnet build
-WORKDIR /src/EmpiresPuzzles.Test
+WORKDIR /src/tests/EmpiresPuzzles.Test
 RUN dotnet test
 
 # publish
