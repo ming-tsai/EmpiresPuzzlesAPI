@@ -2,8 +2,8 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 COPY *.sln .
-COPY tests/EmpiresPuzzles.Test/*.csproj EmpiresPuzzles.Test/
-COPY src/EmpiresPuzzles.API/*.csproj EmpiresPuzzles.API/
+COPY tests/EmpiresPuzzles.Test/*.csproj src/
+COPY src/EmpiresPuzzles.API/*.csproj src/
 RUN dotnet restore
 COPY . .
 
