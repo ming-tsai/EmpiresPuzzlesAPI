@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EmpiresPuzzles.API\EmpiresPuzzles.API.csproj" />
+    <ProjectReference Include="..\..\src\EmpiresPuzzles.API\EmpiresPuzzles.API.csproj" />
   </ItemGroup>
-
 </Project>
