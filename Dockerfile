@@ -1,17 +1,16 @@
 # NuGet restore
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
-WORKDIR /src
 COPY *.sln .
-COPY tests/EmpiresPuzzles.Test/*.csproj src/tests
-COPY src/EmpiresPuzzles.API/*.csproj src/src
+COPY tests/EmpiresPuzzles.Test/*.csproj tests/EmpiresPuzzles.Test/
+COPY src/EmpiresPuzzles.API/*.csproj src/EmpiresPuzzles.API/
 RUN dotnet restore
 COPY . .
 
 # testing
 FROM build AS testing
-WORKDIR /src/src/EmpiresPuzzles.API
+WORKDIR /src/EmpiresPuzzles.API
 RUN dotnet build
-WORKDIR /src/tests/EmpiresPuzzles.Test
+WORKDIR /tests/EmpiresPuzzles.Test
 RUN dotnet test
 
 # publish
